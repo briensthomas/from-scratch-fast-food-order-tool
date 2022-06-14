@@ -22,9 +22,9 @@ function App() {
   return (
     <div className="App">
       <OrderNameInput setOrderName={setOrderName} />
-      <h3>Create Order Section</h3>
+
       <section className='create-order'>
-        Dropdown Section
+
         <FoodDropdown setFood={setFood} />
         <DessertDropdown setDessert={setDessert} />
         <DrinkDropdown setDrink={setDrink} />

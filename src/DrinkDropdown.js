@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function DrinkDropdown({ setDrink }) {
   return (
-    <div>DrinkDropdown
-      <label> Drink
+    <div>
+      <label> Drink: 
         <select onChange={(e) => setDrink(e.target.value)}>
           <option value="thai-tea">Thai Tea</option>
           <option value="macchiato">Macchiato</option>

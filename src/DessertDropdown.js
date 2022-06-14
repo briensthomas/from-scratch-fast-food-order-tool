@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function DessertDropdown({ setDessert }) {
   return (
-    <div>DessertDropdown
+    <div>
       <label> Dessert: 
         <select onChange={(e) => setDessert(e.target.value)}>
           <option value="rice-pudding">Rice Pudding</option>
