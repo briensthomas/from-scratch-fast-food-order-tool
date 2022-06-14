@@ -1,0 +1,13 @@
+import React from 'react';
+
+export default function InstructionForm({ handleSubmit, setInstructionForm, instructionForm }) {
+  return (
+    <form onSubmit={handleSubmit}>
+
+      <label>Add Instructions: 
+        <input value={instructionForm} onChange={(e) => setInstructionForm(e.target.value)} />
+      </label>
+      <button>Submit</button>
+    </form>
+  );
+}
