@@ -3,7 +3,10 @@ import { useState } from 'react';
 import FoodDropdown from './FoodDropdown.js';
 import DessertDropdown from './DessertDropdown.js';
 import DrinkDropdown from './DrinkDropdown.js';
+import OrderNameInput from './OrderNameInput.js';
+
 import DisplayOrder from './DisplayOrder.js';
+
 
 function App() {
 
@@ -18,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <OrderNameInput setOrderName={setOrderName} />
       <h3>Create Order Section</h3>
       <section className='create-order'>
         Dropdown Section
