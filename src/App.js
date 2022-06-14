@@ -1,8 +1,7 @@
 import './App.css';
 import { useState } from 'react';
-import FoodDropdown from './FoodDropdown.js';
-import DessertDropdown from './DessertDropdown.js';
-import DrinkDropdown from './DrinkDropdown.js';
+
+import Dropdown from './Dropdown.js';
 import OrderNameInput from './OrderNameInput.js';
 
 import DisplayOrder from './DisplayOrder.js';
@@ -24,10 +23,9 @@ function App() {
       <OrderNameInput setOrderName={setOrderName} />
 
       <section className='create-order'>
-
-        <FoodDropdown setFood={setFood} />
-        <DessertDropdown setDessert={setDessert} />
-        <DrinkDropdown setDrink={setDrink} />
+        <Dropdown setFood={setFood}
+          setDessert={setDessert}
+          setDrink={setDrink} />
       </section>
 
       <hr />
