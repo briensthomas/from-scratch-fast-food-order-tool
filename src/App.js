@@ -14,18 +14,26 @@ function App() {
   const [drink, setDrink] = useState('thai-tea');
 
   const [instructions, setInstructions] = useState([]);
-  const [InstructionForm, setInstructionForm] = useState('');
+  const [instructionForm, setInstructionForm] = useState('');
 
   const [orderName, setOrderName] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setInstructions([...instructions, instructionForm]);
+  }
 
   return (
     <div className="App">
       <OrderNameInput setOrderName={setOrderName} />
-
       <section className='create-order'>
         <Dropdown setFood={setFood}
           setDessert={setDessert}
           setDrink={setDrink} />
+        <InstructionForm 
+          handleSubmit={handleSubmit}
+          setInstructionForm={setInstructionForm}
+          instructionForm={instructionForm} />
       </section>
 
       <hr />
@@ -36,7 +44,6 @@ function App() {
         dessert={dessert}
         drink={drink}
         instructions={instructions} />
-
     </div>
   );
 }
