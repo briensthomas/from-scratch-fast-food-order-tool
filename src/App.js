@@ -7,9 +7,9 @@ import DisplayOrder from './DisplayOrder.js';
 
 function App() {
 
-  const [food, setFood] = useState('sushi');
-  const [dessert, setDessert] = useState('Apple Pie');
-  const [drink, setDrink] = useState('Thai Iced Tea');
+  const [food, setFood] = useState('kobe-roll');
+  const [dessert, setDessert] = useState('rice-pudding');
+  const [drink, setDrink] = useState('thai-tea');
 
   const [instructions, setInstructions] = useState([]);
   const [InstructionForm, setInstructionForm] = useState('');
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <h3>Create Order Section</h3>
-      <section>
+      <section className='create-order'>
         Dropdown Section
         <FoodDropdown setFood={setFood} />
         <DessertDropdown setDessert={setDessert} />
@@ -27,16 +27,14 @@ function App() {
       </section>
 
       <hr />
-      <section>
 
-        <h3>Display Order Section</h3>
-        <DisplayOrder 
-          orderName={orderName}
-          food={food} 
-          dessert={dessert}
-          drink={drink}
-          instructions={instructions} />
-      </section>
+      <DisplayOrder 
+        orderName={orderName}
+        food={food} 
+        dessert={dessert}
+        drink={drink}
+        instructions={instructions} />
+
     </div>
   );
 }

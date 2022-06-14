@@ -2,9 +2,15 @@ import React from 'react';
 
 export default function DisplayOrder({ orderName, food, dessert, drink, instructions }) {
   return (
-    <div>DisplayOrder
-      <h3> {`${orderName}`} </h3>
-      <img src={`./${food}.png`} />
+    <div className='display-order'>
+      <div className='order-name'>
+        <h3> Order for: {`${orderName}`} </h3>
+      </div>
+      <div className='order-images'>
+        <img src={`./${food}.png`} />
+        <img src={`./${dessert}.png`} />
+        <img src={`./${drink}.png`} />
+      </div>
     </div>
   );
 }
