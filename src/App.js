@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Dropdown from './Dropdown.js';
 import OrderNameInput from './OrderNameInput.js';
 import InstructionForm from './InstructionForm';
+import InstructionsList from './InstructionsList.js';
 import DisplayOrder from './DisplayOrder.js';
 
 
@@ -21,6 +22,7 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     setInstructions([...instructions, instructionForm]);
+    setInstructionForm('');
   }
 
   return (
@@ -30,10 +32,13 @@ function App() {
         <Dropdown setFood={setFood}
           setDessert={setDessert}
           setDrink={setDrink} />
-        <InstructionForm 
-          handleSubmit={handleSubmit}
-          setInstructionForm={setInstructionForm}
-          instructionForm={instructionForm} />
+        <div className='instruction-form'>
+
+          <InstructionForm 
+            handleSubmit={handleSubmit}
+            setInstructionForm={setInstructionForm}
+            instructionForm={instructionForm} />
+        </div>
       </section>
 
       <hr />
@@ -42,8 +47,9 @@ function App() {
         orderName={orderName}
         food={food} 
         dessert={dessert}
-        drink={drink}
-        instructions={instructions} />
+        drink={drink} />
+
+      <InstructionsList instructions={instructions} />
     </div>
   );
 }

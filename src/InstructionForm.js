@@ -5,7 +5,7 @@ export default function InstructionForm({ handleSubmit, setInstructionForm, inst
     <form onSubmit={handleSubmit}>
 
       <label>Add Instructions: 
-        <input value={instructionForm} onChange={(e) => setInstructionForm(e.target.value)} />
+        <textarea value={instructionForm} onChange={(e) => setInstructionForm(e.target.value)} />
       </label>
       <button>Submit</button>
     </form>

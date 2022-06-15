@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function DisplayOrder({ orderName, food, dessert, drink, instructions }) {
+export default function DisplayOrder({ orderName, food, dessert, drink }) {
   return (
     <div className='display-order'>
       <div className='order-name'>
@@ -10,6 +10,10 @@ export default function DisplayOrder({ orderName, food, dessert, drink, instruct
         <img src={`./${food}.png`} />
         <img src={`./${dessert}.png`} />
         <img src={`./${drink}.png`} />
+      </div>
+      <h3>Special Instructions: </h3>
+      <div>
+
       </div>
     </div>
   );
