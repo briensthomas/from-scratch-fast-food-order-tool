@@ -1,38 +1,66 @@
 .App {
-  text-align: center;
+  width: 100%;
+}
+/* Create Order */
+
+.order-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.order-details input {
+  margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.create-order {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 25px 0px;
+}
+
+.create-order select, text {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.instruction-form {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+}
+
+.instruction-form button {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Display Order */
+.display-order {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.order-name {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.order-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.order-images img {
+  max-width: 250px;
+  max-height: 213px;
+  margin: 10px;
 }
